@@ -3,9 +3,6 @@ public class Project {
     private String name;
     private ProjectType type;
 
-    public Project() {
-    }
-
     public Project(String id, String name, ProjectType type) {
         this.id = id;
         this.name = name;
