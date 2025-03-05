@@ -21,9 +21,8 @@ public class GraphGenerator {
         if (isValid) {
             calculateMetrics();
         } else {
-            System.out.println("Could not generate a graph with both a clique of size " + k + " and a stable set of size " + k + ".");
-            generateBestEffortGraph();
-            calculateMetrics();
+            System.out.println("Not possible");
+            System.exit(0);
         }
     }
 
@@ -56,49 +55,6 @@ public class GraphGenerator {
         }
 
         return true;
-    }
-
-    private void generateBestEffortGraph() {
-        for (int i = 0; i < n; i++) {
-            for (int j = i + 1; j < n; j++) {
-                adjacencyMatrix[i][j] = Math.random() > 0.5 ? 1 : 0;
-                adjacencyMatrix[j][i] = adjacencyMatrix[i][j];
-            }
-        }
-        if (n >= k) {
-            for (int i = 0; i < k; i++) {
-                for (int j = i + 1; j < k; j++) {
-                    adjacencyMatrix[i][j] = 1;
-                    adjacencyMatrix[j][i] = 1;
-                }
-            }
-            int remainingVertices = n - k;
-            int stableSetSize = Math.min(k, remainingVertices);
-
-            if (stableSetSize > 0) {
-                for (int i = k; i < k + stableSetSize; i++) {
-                    for (int j = k; j < k + stableSetSize; j++) {
-                        if (i != j) {
-                            adjacencyMatrix[i][j] = 0;
-                            adjacencyMatrix[j][i] = 0;
-                        }
-                    }
-                }
-
-                System.out.println("Created a clique of size " + k + " and a stable set of size " + stableSetSize + ".");
-            } else {
-                System.out.println("Created a clique of size " + k + " but no stable set (n = k).");
-            }
-        } else {
-            for (int i = 0; i < n; i++) {
-                for (int j = i + 1; j < n; j++) {
-                    adjacencyMatrix[i][j] = 1;
-                    adjacencyMatrix[j][i] = 1;
-                }
-            }
-
-            System.out.println("Created a clique of size " + n + " (instead of " + k + ") and no stable set.");
-        }
     }
 
     private void calculateMetrics() {
