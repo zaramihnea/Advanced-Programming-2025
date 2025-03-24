@@ -20,14 +20,14 @@ public class Main {
         System.out.println("Starting at: " + start.getName() + " (" + start.getType() + ")");
 
         // COMPULSORY STUFF
-        TreeSet<Location> friendlyLocs = Arrays.stream(locationList)
+        Set<Location> friendlyLocs = Arrays.stream(locationList)
                 .filter(l -> l.getType() == LocationType.FRIENDLY)
                 .collect(Collectors.toCollection(TreeSet::new));
 
         System.out.println("\n-- Friendly Locations (sorted naturally) --");
         friendlyLocs.forEach(System.out::println);
 
-        LinkedList<Location> enemyLocs = Arrays.stream(locationList)
+        List<Location> enemyLocs = Arrays.stream(locationList)
                 .filter(l -> l.getType() == LocationType.ENEMY)
                 .collect(Collectors.toCollection(LinkedList::new));
 
