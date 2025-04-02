@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7be5a31e-e340-47bc-a996-79fe2cb1795e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dotsgame/DotsAndLinesGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dotsgame/model/Dot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dotsgame/model/Edge.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dotsgame/model/GameModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dotsgame/model/Line.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dotsgame/ui/ConfigPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dotsgame/ui/ControlPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dotsgame/ui/GameCanvas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/dotsgame/DotsAndLinesGameTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dotsgame/DotsAndLinesGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dotsgame/DotsAndLinesGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1743590766161</updated>
-      <workItem from="1743590767164" duration="3960000" />
+      <workItem from="1743590767164" duration="5323000" />
     </task>
     <servers />
   </component>

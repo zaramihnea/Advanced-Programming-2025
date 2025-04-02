@@ -12,13 +12,11 @@ import java.io.*;
 import javax.imageio.ImageIO;
 
 public class DotsAndLinesGame extends JFrame {
-
-    // UI Components
+    
     private ConfigPanel configPanel;
     private GameCanvas gameCanvas;
     private ControlPanel controlPanel;
 
-    // Game model
     private GameModel gameModel;
 
     public static void main(String[] args) {
