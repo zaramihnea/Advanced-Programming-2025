@@ -67,7 +67,7 @@ public class Player implements Runnable {
                 Thread.sleep(random.nextInt(300) + 100);
             } catch (InterruptedException e) {
                 Thread.currentThread().interrupt();
-                return;
+                return;`
             }
         }
 
