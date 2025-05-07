@@ -1,24 +1,38 @@
 package com.serverless.model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "countries")
+@NamedQuery(name = "Country.findByName", query = "SELECT c FROM Country c WHERE c.name LIKE :name")
 public class Country {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
+    @Column(nullable = false)
     private String name;
+
+    @Column(nullable = false, unique = true, length = 3)
     private String code;
-    private int continentId;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "continent_id", nullable = false)
+    private Continent continent;
 
     public Country() {}
 
-    public Country(String name, String code, int continentId) {
+    public Country(String name, String code, Continent continent) {
         this.name = name;
         this.code = code;
-        this.continentId = continentId;
+        this.continent = continent;
     }
 
-    public Country(int id, String name, String code, int continentId) {
+    public Country(int id, String name, String code, Continent continent) {
         this.id = id;
         this.name = name;
         this.code = code;
-        this.continentId = continentId;
+        this.continent = continent;
     }
 
     public int getId() {
@@ -45,12 +59,12 @@ public class Country {
         this.code = code;
     }
 
-    public int getContinentId() {
-        return continentId;
+    public Continent getContinent() {
+        return continent;
     }
 
-    public void setContinentId(int continentId) {
-        this.continentId = continentId;
+    public void setContinent(Continent continent) {
+        this.continent = continent;
     }
 
     @Override
@@ -58,6 +72,6 @@ public class Country {
         return "Country{id=" + id +
                 ", name='" + name +
                 "', code='" + code +
-                "', continentId=" + continentId + "}";
+                "', continent=" + continent + "}";
     }
 }

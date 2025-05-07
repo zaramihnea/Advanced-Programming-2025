@@ -1,7 +1,16 @@
 package com.serverless.model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "continents")
+@NamedQuery(name = "Continent.findByName", query = "SELECT c FROM Continent c WHERE c.name LIKE :name")
 public class Continent {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+    
+    @Column(nullable = false, unique = true)
     private String name;
 
     public Continent() {}
